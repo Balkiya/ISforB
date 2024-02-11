@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница фитнес клуба</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            background-image: url('https://cdn.pixabay.com/photo/2016/11/22/22/24/adult-1850925_1280.jpg'); /* Замените ссылку на своё изображение */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        main {
+            padding: 50px;
+            text-align: center;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #applicationFormModal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        #applicationFormModal h2 {
+            margin-top: 0;
+        }
+        form {
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="#register">Зарегистрироваться</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Добро пожаловать в фитнес клуб "Fit&Strong"</h1>
+        <p>Мы предлагаем широкий спектр услуг для вашего здоровья и фитнеса.</p>
+        <p>У нас есть профессиональные тренеры, современное оборудование и разнообразные групповые занятия.</p>
+        <p>Присоединяйтесь к нам прямо сейчас и начните путь к лучшей версии себя!</p>
+    </main>
+
+    <footer>
+        <p>Оставьте заявку прямо сейчас, и наш менеджер свяжется с вами в ближайшее время.</p>
+        <button onclick="openApplicationForm()">Оставить заявку</button>
+    </footer>
+
+    <!-- Модальное окно для заявки -->
+    <div id="applicationFormModal">
+        <h2>Оставить заявку</h2>
+        <form>
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Ваш email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+
+    <script>
+        function openApplicationForm() {
+            document.getElementById('applicationFormModal').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
